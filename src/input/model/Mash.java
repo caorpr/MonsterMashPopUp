@@ -65,6 +65,14 @@ public class Mash
 	{
 		return isMale;
 	}
+	
+	public String toString()
+	{
+		String thingInfo = monstername + " has " + eyes + " eyes, " + mouths + " mouths, " 
+				+ legs + " legs, " + hair + " strands of hair, " + "and " + isMale + " male.";
+		
+		return thingInfo;
+	}
 }
 
 //pretty much done now :)
