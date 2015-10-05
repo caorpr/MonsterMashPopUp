@@ -65,6 +65,46 @@ public class Mash
 	{
 		return isMale;
 	}
+	
+	
+	public void setMonstername(String monstername)
+	{
+		this.monstername = monstername;
+	}
+	
+	public void setEyes(int eyes)
+	{
+		this.eyes = eyes;
+	}
+	
+	public void setMouths(int mouths)
+	{
+		this.mouths = mouths;
+	}
+	
+	public void setLegs(double legs)
+	{
+		this.legs = legs;
+	}
+	
+	public void setHair(double hair)
+	{
+		this.hair = hair;
+	}
+	
+	public void setIsMale(boolean isMale)
+	{
+		this.isMale = isMale;
+	}
+	
+	
+	public String toString()
+	{
+		String mashInfo = monstername + " has " + eyes + " eyes, " + mouths + " mouths, "
+							+ legs + " legs, " + hair + " strands of hair, and ismale =" + isMale;
+		
+		return mashInfo;
+	}
 }
 
 //pretty much done now :)
