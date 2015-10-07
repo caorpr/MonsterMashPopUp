@@ -7,25 +7,23 @@ import input.model.Mash;
 
 public class MashController
 {
-<<<<<<< HEAD
-	
+
 	
 	private MashDisplay myPopups;
 	private Mash myMash;
 	
 	
-	
-=======
+
 	private MashDisplay myPopups;
 	private Mash myMash;
 	
 		
->>>>>>> origin/master
+
 	public MashController()
 	{
 		myPopups = new MashDisplay();
 	}
-<<<<<<< HEAD
+
 	
 	
 	
@@ -145,7 +143,7 @@ public class MashController
 			tempIsMale = myPopups.getAnswer("true or false only!");
 		}
 		
-		if(isDouble(tempIsMale))
+		if(isBoolean(tempIsMale))
 		{
 			isMale = Boolean.parseBoolean(tempIsMale);
 		}
@@ -159,7 +157,7 @@ public class MashController
 		
 		
 		
-		
+	}
 		
 		
 		private boolean isInteger(String input)
@@ -182,60 +180,42 @@ public class MashController
 		
 		
 		
-=======
 		
-		public void start()
+		
+		private boolean isDouble(String input)
 		{
-			String name = myPopups.getAnswer("Type in a monster name: ");
+			boolean isDouble = false;
 			
-			myPopups.displayResponse("Your monster's name is: " + name);
-			
-			int eyes;
-			String tempEyes = myPopups.getAnswer("How many eyes does it have?");
-			
-			while(!isInteger(tempEyes))
+			try
 			{
-				tempEyes = myPopups.getAnswer("Type in an interger!");
+				double validDouble = Double.parseDouble(input);
+				isDouble = true;
 			}
-			
-			if(isInteger(tempEyes))
+			catch(NumberFormatException error)
 			{
-				eyes = Integer.parseInt(tempEyes);
+				myPopups.displayResponse("You typed wrong.");
 			}
-			else
+			return isDouble;
+			
+			
+		private boolean isBoolean(String input)
+		{
+			boolean isBoolean = false;
+			
+			try
 			{
-				eyes = -12345678;
+				double validBoolean = Boolean.parseBoolean(input);
+				isBoolean = true;
 			}
-			
-			myPopups.displayResponse("You typed in " + eyes);
-			
-			int mouths;
-			String tempMouths = myPopups.getAnswer("How many mouths does it have?");
-			
-			while(!isInteger(tempMouths))
+			catch(NumberFormatException error)
 			{
-				tempMouths = myPopups.getAnswer("Type it in again!");
+				myPups.displayResponse("fail");
 			}
-			
-			if(isInteger(tempMouths))
-			{
-				mouths = Integer.parseInt(tempMouths);
-			}
-			else
-			{
-				mouths = -2;
-			}
-			
-			myPopups.displayResponse("You typed in: " + eyes);
-			
-			myPopups.displayResponse(myMash.toString());
+			return isBoolean;
 		}
-			
-			
-			
+		}
 
->>>>>>> origin/master
 	}
-}
+
 
 

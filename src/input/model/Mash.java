@@ -66,7 +66,6 @@ public class Mash
 		return isMale;
 	}
 	
-<<<<<<< HEAD
 	
 	public void setMonstername(String monstername)
 	{
@@ -105,14 +104,8 @@ public class Mash
 							+ legs + " legs, " + hair + " strands of hair, and ismale =" + isMale;
 		
 		return mashInfo;
-=======
-	public String toString()
-	{
-		String thingInfo = monstername + " has " + eyes + " eyes, " + mouths + " mouths, " 
-				+ legs + " legs, " + hair + " strands of hair, " + "and " + isMale + " male.";
-		
-		return thingInfo;
->>>>>>> origin/master
+
+
 	}
 }
 
