@@ -9,8 +9,6 @@ public class MashController
 {
 
 	
-	private MashDisplay myPopups;
-	private Mash myMash;
 	
 	
 
@@ -196,7 +194,7 @@ public class MashController
 				myPopups.displayResponse("You typed wrong.");
 			}
 			return isDouble;
-			
+		}
 			
 		private boolean isBoolean(String input)
 		{
@@ -204,16 +202,16 @@ public class MashController
 			
 			try
 			{
-				double validBoolean = Boolean.parseBoolean(input);
+				boolean validBoolean = Boolean.parseBoolean(input);
 				isBoolean = true;
 			}
 			catch(NumberFormatException error)
 			{
-				myPups.displayResponse("fail");
+				myPopups.displayResponse("fail");
 			}
 			return isBoolean;
 		}
-		}
+		
 
 	}
 
